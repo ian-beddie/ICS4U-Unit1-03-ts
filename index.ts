@@ -11,31 +11,27 @@ import { createPrompt } from 'bun-promptx'
 const subTime = 60
 const pizzaTime = 45
 const soupTime = 105
+let cookTime = 0
 
 const userFood = createPrompt('Are you heating sub, pizza, or soup?:')
 
-if (userFood.value === null) {
-  console.log('You did not enter any input.')
-  } else {
-    if (userFood.value == "sub") {
-      const cookTime = subTime
-      } else {
-      if (userFood.value == "pizza") {
-        const cookTime = pizzaTime
-        } else {
-        if (userFood.value == "soup") {
-          const cookTime = soupTime
-          } else {
-          console.log('you aint enter a food')
-          }
-        }
-      }
-  }
+if (userFood.value == "sub") {
+  cookTime = subTime
+} else if (userFood.value == "pizza") {
+  cookTime = pizzaTime
+  } else if (userFood.value == "soup") {
+    cookTime = soupTime
+    } else {
+     console.log('you aint enter a food')
+    }
+
+const foodAmount = createPrompt('How many or you heating?:')
+
+if 
+
 console.log(`${cookTime} is cook time `)
 
-
-/*    console.log(`${objectMass}kg of mass would produce ${energyOutput}J of energy. `)
-    }
-}
+/*
+    console.log(`${objectMass}kg of mass would produce ${energyOutput}J of energy. `)
  */
 console.log("\nDone.")
