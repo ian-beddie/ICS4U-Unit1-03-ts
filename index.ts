@@ -15,41 +15,33 @@ let cookTime = 0
 let minutes = 0
 let seconds = 0
 
-
 const userFood = createPrompt('Are you heating sub, pizza, or soup?:')
 
-if (userFood.value == "sub") {
+if (userFood.value === 'sub') {
   cookTime = subTime
-} else if (userFood.value == "pizza") {
+} else if (userFood.value === 'pizza') {
   cookTime = pizzaTime
-  } else if (userFood.value == "soup") {
-    cookTime = soupTime
-    } else {
-      console.log('you aint enter a food')
-      }
+} else if (userFood.value === 'soup') {
+  cookTime = soupTime
+} else {
+  console.log('you aint enter a food')
+}
 
 const foodAmount = createPrompt('How many or you heating?:')
 
-if (foodAmount.value == 1) {
+if (foodAmount.value === 1) {
   cookTime = (cookTime * 1)
-} else if (foodAmount.value == 2) {
+} else if (foodAmount.value === 2) {
   cookTime = (cookTime * 1.5)
-  } else if (foodAmount.value == 3) {
-    cookTime = (cookTime * 2)
-    } else {
-      console.log('wrong')
-      }
+} else if (foodAmount.value === 3) {
+  cookTime = (cookTime * 2)
+} else {
+  console.log('wrong')
+}
 
-minutes = Math.floor(cookTime / 60);
-seconds = cookTime % 60;
+minutes = Math.floor(cookTime / 60)
+seconds = cookTime % 60
 
-console.log(`Minutes: ${minutes}, Seconds: ${seconds}`);
+console.log(`Minutes: ${minutes}, Seconds: ${seconds}`)
 
-
-
-
-
-/*
-    console.log(`${objectMass}kg of mass would produce ${energyOutput}J of energy. `)
- */
-console.log("\nDone.")
+console.log('\nDone.')
